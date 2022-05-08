@@ -281,6 +281,7 @@ section.home .section-copy {
     .read-more-window-content button.read-more:active,
     .section-copy button.read-more:hover,
     .section-copy button.read-more:focus,
+    .read-more-window-content button.read-more.active,
     .section-copy button.read-more.active {
         color: #222;
         text-decoration: none;
@@ -289,7 +290,8 @@ section.home .section-copy {
         text-shadow: none
     }
 
-        .section-copy button.read-more.active:hover {
+        .section-copy button.read-more.active:hover,
+        .read-more-window-content button.read-more.active:hover {
             color: #222;
             text-decoration: none;
             border: 1px solid transparent;
