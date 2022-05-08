@@ -407,6 +407,7 @@ section.career {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 10000;
     bottom: 0;
     height: 100vh;
     background: rgba(0,0,0,.85);
@@ -458,7 +459,7 @@ body.reading-more .read-more-window {
     }
 
     nav .nav-title h1 {
-        font-size: 16px;
+        /* font-size: 16px; */
         line-height: 66px;
     }
 
