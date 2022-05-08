@@ -257,6 +257,7 @@ section.home .section-copy {
         border-color: transparent;
     }
 
+.read-more-window-content button.read-more,
 .section-copy button.read-more {
     color: #E0AE00;
     text-decoration: none;
@@ -271,6 +272,13 @@ section.home .section-copy {
     transition: all 0.3s ease;
 }
 
+.read-more-window-content button.read-more {
+    float: none;
+}
+
+    .read-more-window-content button.read-more:hover,
+    .read-more-window-content button.read-more:focus,
+    .read-more-window-content button.read-more:active,
     .section-copy button.read-more:hover,
     .section-copy button.read-more:focus,
     .section-copy button.read-more.active {
