@@ -321,13 +321,13 @@ section.home .section-copy {
 }
 
 section.home .section-copy h2,
-section.services .section-copy h2,
 section.process .section-copy h2,
 section.pitch .section-copy h2,
 section.career .section-copy h2 {
     font-size: 330%;
 }
 
+section.services .section-copy h2,
 section.brands .section-copy h2 {
     font-size: 190%;
     margin-bottom: .5em
@@ -551,7 +551,7 @@ body.reading-more .read-more-window {
                 width: 100%;
                 max-height: 25vh;
                 object-fit: cover;
-                object-position: 0 -250px;
+                object-position: bottom;
             }
 
             section.brands .section-image img {
