@@ -468,7 +468,9 @@ body.reading-more {
     font-size: 1.1em;
     line-height: 1.6;
     overflow-y: auto;
+    max-width: 992px;
     max-height: 75vh;
+    margin: 0 auto;
 }
 
 body.reading-more .read-more-window {
