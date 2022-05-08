@@ -43,15 +43,17 @@ function closeNavMenu() {
   $("nav button.hamburger").removeClass("is-active");
   $("body").removeClass("nav-menu-open");
 }
+function openContactFromPopup() {
+    console.log('clicked');
+    closePopup();
+    scrollToAnchor("contact");
+    return false;
+}
 function init() {
   setActiveMenuItem();
   $("nav li a").each(function () {
     $(this).attr("id", $(this).data("name"));
   });
-    $(".rm-contact").on("click", function () {
-        closePopup();
-        scrollToAnchor("contact");
-    });
   $(".read-more").on("click", function () {
     var text = $(this).next('.read-more-content').html();
     $('.read-more-window-content').html(text);
