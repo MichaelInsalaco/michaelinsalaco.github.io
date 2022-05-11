@@ -494,11 +494,6 @@ body.reading-more .read-more-window {
     nav li a {
         padding: 2em 0.7em;
     }
-
-    nav .nav-title h1 {
-        /* font-size: 16px; */
-        /* line-height: 58px; */
-    }
 }
 
 @media screen and (max-width: 1170px) {
@@ -511,13 +506,14 @@ body.reading-more .read-more-window {
     }
 
         section.contact .section-image {
-            height: 69vh;
-            background: url(../img/lawn.jpg?v=20220509) no-repeat -120px -520px;
+            height: 61vh;
+            background: url(../img/lawn.jpg?v=20220509) no-repeat -370px -495px;
         }
 
         section.pitch .section-image {
-            height: 57vh;
+            height: 32vh;
             background: url(../img/pitch.jpg?v=20220509) no-repeat;
+            background-size: cover;
         }
 
     section.process .section-copy {
@@ -580,7 +576,7 @@ body.reading-more .read-more-window {
             section.brands .section-image img {
                 max-width: unset;
                 width: 100%;
-                max-height: 55vh;
+                max-height: 43vh;
                 object-fit: cover;
                 object-position: 1px 75%;
             }
@@ -745,6 +741,10 @@ body.reading-more .read-more-window {
 }
 
 @media screen and (max-width: 767px) {
+
+    nav .nav-title h1 {
+        font-size: 22px;
+    }
 
     section.career .section-image img {
         object-position: 0 -10vh;
