@@ -183,7 +183,7 @@ section {
 }
 
     section.brands {
-        /* justify-content: space-between; */ height: 100vh;
+        /* justify-content: space-between; */ height: auto;
     }
 
     section.home {
@@ -235,7 +235,7 @@ section {
         }
 
 .section-copy {
-    padding: 2.6em 5em;
+    padding: 2em;
     background: #231F20;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
