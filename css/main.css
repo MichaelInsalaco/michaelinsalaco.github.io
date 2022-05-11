@@ -755,7 +755,8 @@ body.reading-more .read-more-window {
     }
 
     section.home {
-        background: url(../img/home.jpg?v=20220509) no-repeat -1050px -170px;
+        background: url(../img/home.jpg?v=20220509) no-repeat -1050px -220px;
+        /* height: auto; */
     }
 
     section.home {
