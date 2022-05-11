@@ -109,12 +109,15 @@ nav {
     display: block;
     background: #202124;
     width: 100%;
+    align-items: center;
     color: #E5AF00;
     font-family: 'Open Sans';
+    justify-content: flex-start;
+    flex-wrap: wrap;
     position: fixed;
     top: 0;
+    display: flex;
     border-bottom: 2px solid rgba(0,0,0,0.6);
-    /* border-top: 10px #E5AF00 solid; */
     background-color: #000;
     background-image: url("../img/binding-dark.png");
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -125,20 +128,23 @@ nav {
     }
 
     nav .nav-title {
-        float: left;
-        padding: 0 1em;
+        width: 50%;
+        transition: padding 0.3s ease;
+        padding: 0 5em;
     }
 
     nav ul {
-        float: right;
         display: flex;
         margin: 0;
+        width: 50%;
+        justify-content: flex-end;
         padding: 0;
-        margin-right: 3em;
+        padding-right: 3em;
     }
 
     nav li {
         display: block;
+        transition: padding 0.3s ease;
         align-items: stretch;
     }
 
@@ -147,6 +153,7 @@ nav {
     }
 
     nav li a {
+        transition: padding 0.3s ease;
         padding: 2em 1.6em;
         color: #ffff;
         display: block;
@@ -155,6 +162,7 @@ nav {
         background: url('../img/top_arrow.png') no-repeat;
         background-position: center -11px;
         transition: background-position 0.2s ease;
+        white-space: nowrap;
     }
 
         nav li a.active,
@@ -176,23 +184,25 @@ section {
 }
 
     section.brands {
-        justify-content: space-between
+        /* justify-content: space-between; */ height: auto;
     }
 
     section.home {
-        background: url(../img/home.jpg) no-repeat center -190px;
+        background: url(../img/home.jpg?v=20220509) no-repeat center -140px;
+        background-size: initial;
     }
 
     section.contact {
-        background: url(../img/lawn.jpg) no-repeat center center;
+        background: url(../img/lawn.jpg?v=20220509) no-repeat center center;
     }
 
     section.pitch {
-        background: url(../img/pitch.jpg) no-repeat;
+        background: url(../img/pitch.jpg?v=20220509) no-repeat;
+        background-size: 100%;
     }
 
     section.process {
-        background: url(../img/sketches.jpg) no-repeat center center;
+        background: url(../img/sketches.jpg?v=20220509) no-repeat center center;
     }
 
     section.services,
@@ -208,8 +218,11 @@ section {
         section.career img {
             max-height: 100vh;
             display: block;
-            max-width: 45vw;
             box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        }
+
+        section.brands img {
+            width: 100%
         }
 
         section.brands .section-image {
@@ -221,9 +234,8 @@ section {
         }
 
 .section-copy {
-    padding: 1.6em 4.5em;
+    padding: 2.6em 5em;
     background: #262626;
-    border-left: 20px solid #FFFFFF;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
@@ -267,7 +279,7 @@ section.home .section-copy {
     border-bottom: 1px dashed;
     padding: .68em 1.2em;
     font-size: 90%;
-    float: right;
+    /* float: right; */
     display: inline-block;
     margin: 0 1em;
     transition: all 0.3s ease;
@@ -301,7 +313,8 @@ section.home .section-copy {
         }
 
 .section-copy h3 {
-    margin-top: 8px
+    margin-top: 8px;
+    font-size: 135%;
 }
 
 .section-copy p {
@@ -321,6 +334,7 @@ section.home .section-copy {
     line-height: 1.1;
 }
 
+section.services .section-copy h2,
 section.home .section-copy h2,
 section.process .section-copy h2,
 section.pitch .section-copy h2,
@@ -328,32 +342,26 @@ section.career .section-copy h2 {
     font-size: 330%;
 }
 
-section.services .section-copy h2,
+
 section.brands .section-copy h2 {
     font-size: 190%;
-    margin-bottom: .5em
 }
 
 section.services .section-copy {
-    border-left: 0;
-    border-bottom: 20px solid #FFFFFF;
 }
 
 
 section.pitch .section-copy {
-    border-left: 0;
-    border-right: 0;
     background: transparent;
     box-shadow: none;
-    width: 42%;
-    margin-left: 3em;
-    /* text-shadow: 2px 2px 2px black; */
+    width: 52%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    text-align: justify;
 }
 
 section.brands .section-copy {
-    border-left: 0;
-    border-top: 20px solid #FFFFFF;
-    margin-right: 5em;
 }
 
 section.services .section-copy,
@@ -361,9 +369,9 @@ section.services .section-image {
     width: 50%;
 }
 
-,
+
 section.brands .section-copy {
-    width: 50%
+    width: 53%;
 }
 
 section.brands .section-image {
@@ -385,7 +393,7 @@ section.process {
         width: 50%;
         max-width: 670px;
         margin-left: 5em;
-        margin-top: 10em;
+        margin-top: 4em;
     }
 
     section.process .section-image {
@@ -395,6 +403,8 @@ section.process {
 
 section.brands .section-copy {
     box-shadow: none;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 section.services .section-copy {
@@ -410,7 +420,7 @@ section.services .section-copy {
 section.brands .section-copy ul {
     width: 50%;
     padding-left: 0;
-    float: left;
+    /* float: left; */
     display: inline-block;
 }
 
@@ -436,7 +446,7 @@ section.career {
 }
 
 .read-more-window {
-    padding: 6em 4em 4em;
+    padding: 5.7em 4em 4em;
     transition: opacity 1s ease;
     opacity: 0;
     pointer-events: none;
@@ -479,8 +489,36 @@ body.reading-more .read-more-window {
     pointer-events: all;
 }
 
+@media screen and (max-width: 1300px) {
+
+    nav li a {
+        padding: 2em 0.7em;
+    }
+
+    nav .nav-title h1 {
+        /* font-size: 16px; */
+        /* line-height: 58px; */
+    }
+}
+
 @media screen and (max-width: 1170px) {
 
+
+    section.contact,
+    section.pitch {
+        background: none;
+        background: #232323;
+    }
+
+        section.contact .section-image {
+            height: 69vh;
+            background: url(../img/lawn.jpg?v=20220509) no-repeat -120px -520px;
+        }
+
+        section.pitch .section-image {
+            height: 57vh;
+            background: url(../img/pitch.jpg?v=20220509) no-repeat;
+        }
 
     section.process .section-copy {
         align-self: unset;
@@ -502,13 +540,9 @@ body.reading-more .read-more-window {
         font-family: 'Open Sans', sans-serif
     }
 
-    nav .nav-title h1 {
-        /* font-size: 16px; */
-        line-height: 66px;
-    }
 
     nav li a {
-        padding: 2.8em 0.7em;
+        padding: 2.1em 0.7em;
     }
 
 
@@ -525,7 +559,6 @@ body.reading-more .read-more-window {
         padding: 2em
     }
 
-    section.career,
     section.services,
     section.brands {
         display: block;
@@ -538,32 +571,26 @@ body.reading-more .read-more-window {
 
         section.career .section-copy,
         section.career .section-image,
-        section.services .section-copy,
-        section.services .section-image,
         section.brands .section-copy,
         section.brands .section-image {
             width: 100%;
         }
 
-            section.career .section-image img,
             section.services .section-image img,
             section.brands .section-image img {
                 max-width: unset;
                 width: 100%;
-                max-height: 25vh;
+                max-height: 55vh;
                 object-fit: cover;
-                object-position: bottom;
+                object-position: 1px 75%;
             }
 
             section.brands .section-image img {
-                object-position: 0 -80px;
-                max-height: 30vh;
+                object-position: center -15vh;
+                max-height: 48Vh;
+                object-fit: 100%;
             }
 
-            section.career .section-image img {
-                object-position: 0 -115px;
-                max-height: 35vh;
-            }
 
         section.services .section-copy,
         section.brands .section-copy {
@@ -571,93 +598,125 @@ body.reading-more .read-more-window {
             border: 0;
             padding-bottom: 3em;
             width: 100%;
+            margin: 0 auto;
+            padding: 2em; /* max-width: 670px; */
         }
 
-        section.career .section-copy {
-            box-shadow: none;
-            border: 0;
-            padding-bottom: 3em;
-            width: 100%;
+    section.career .section-copy {
+        box-shadow: none;
+        border: 0;
+        padding-top: 3em;
+        padding-bottom: 3em;
+        width: 100%;
+        justify-content: flex-end;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+        section.career .section-copy button.read-more {
         }
 
     section.process .section-copy {
         width: 100%;
-        max-width: 420px;
         margin: 0 auto;
+        box-shadow: none;
     }
 
-    section.process .section-image {
-        display: none
+    section.process {
+        background: none;
+        flex-direction: column;
+        background: #262626;
+        height: unset;
+        flex-wrap: wrap;
+        justify-content: flex-start;
     }
+
+        section.process .section-image {
+            background: url(../img/sketches.jpg?v=20220509) no-repeat center center;
+            height: 40vh;
+            width: 100%;
+            background-size: cover
+        }
 
     section.pitch {
         display: block;
-        background-position: -690px 0px;
-        padding-top: 5em
+        /* background-position: -690px 0px; */
+        background-size: cover;
+        height: auto;
     }
 
         section.pitch .section-copy {
             max-width: 100%;
             width: 100%;
             margin: 0;
-            background: rgba(0,0,0,0.8);
-            text-shadow: none;
+            background: #232323;
         }
 
     section.contact {
         display: block;
         background-position: -200px -161px;
-        padding-top: 5em;
+        height: auto;
     }
 
         section.contact .section-copy {
             margin-top: 0;
-            max-width: 420px;
+            max-width: unset;
             width: 100%;
             margin: 0 auto;
+            padding: 3.6em 2em;
         }
 
     section.brands .section-copy ul {
         width: 50%;
         padding-left: 0;
-        float: left;
         display: inline-block;
+    }
+
+    section.services .section-copy,
+    section.services .section-image {
+        width: 100%
     }
 }
 
 
 .mobile-collapse {
     display: none;
-    float: right;
-    padding: 14px;
+    /* float: right; */
+    /* padding: 14px; */
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
 
-    section.home {
-        background: url(../img/home.jpg) no-repeat -1050px -170px;
+    section.career .section-image img {
+        object-position: 0 -115px;
+        max-height: 35vh;
     }
 
-    section.home {
-        position: relative;
-        z-index: 0;
+    section.career {
+        display: block;
+        height: auto;
     }
 
-        section.home .section-copy {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            bordeR: 0;
-            max-width: 220px;
-            z-index: 1;
-            background: transparent;
-            box-shadow: none;
-            text-shadow: 2px 2px 2px #000;
+        section.career .section-image img {
+            object-position: 0 -26vh;
+            max-width: unset;
+            width: 100%;
+            max-height: 46vh;
+            object-fit: cover;
         }
+
+
+    nav .nav-title {
+        width: 90%;
+        padding-left: 1.9em;
+    }
 
     .mobile-collapse {
         display: block;
         transform: scale(.84);
+        width: 10%;
+        display: flex;
+        justify-content: flex-end;
     }
 
     nav li a {
@@ -679,12 +738,47 @@ body.reading-more .read-more-window {
     body.nav-menu-open nav ul {
         opacity: 1;
         pointer-events: all;
+        width: 100%;
+        padding-right: 0;
         display: block;
     }
+}
 
-    section.home .section-copy {
-        border-left: 0;
+@media screen and (max-width: 767px) {
+
+    section.career .section-image img {
+        object-position: 0 -10vh;
     }
+
+    section.brands .section-image img {
+        object-position: center -3vh;
+    }
+
+    section.home {
+        background: url(../img/home.jpg?v=20220509) no-repeat -1050px -170px;
+    }
+
+    section.home {
+        position: relative;
+        z-index: 0;
+    }
+
+        section.home .section-copy {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            bordeR: 0;
+            max-width: 220px;
+            z-index: 1;
+            background: transparent;
+            box-shadow: none;
+            text-shadow: 2px 2px 2px #000;
+        }
+
+
+        section.home .section-copy {
+            border-left: 0;
+        }
 }
 
 footer {
