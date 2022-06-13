@@ -98,6 +98,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Montserrat, sans-serif
 }
 
+.keep-together {
+    white-space: nowrap
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -751,6 +755,9 @@ body.reading-more .read-more-window {
 
 @media screen and (max-width: 767px) {
 
+    .keep-together {
+        white-space: normal
+    }
     nav .nav-title h1 {
         font-size: 22px;
     }
