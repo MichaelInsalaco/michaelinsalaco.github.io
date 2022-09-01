@@ -619,7 +619,7 @@ body.reading-more .read-more-window {
             }
 
             section.brands .section-image img {
-                object-position: center -15vh;
+                object-position: center -2vh;
                 max-height: 48Vh;
                 object-fit: 100%;
             }
@@ -794,7 +794,7 @@ body.reading-more .read-more-window {
     }
 
     section.brands .section-image img {
-        object-position: center -3vh;
+        object-position: center top;
     }
 
     section.home {
